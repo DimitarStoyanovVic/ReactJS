@@ -1,27 +1,20 @@
 import { Component } from "react";
 
+import Card from '../card/card.component';
+import './card-list.styles.css';
+
 class CardList extends Component {
   render() {
-    console.log(this.props.monsters);
-    console.log('render from CardList');
+    const monsters = this.props.monsters;
 
     return (
       <div className='card-list'>
         {
-          this.props.monsters.map((monster) => {
-            const { name, email, id } = monster;
-
+          monsters.map((monster) => {
             return (
-              <div key={id}>
-                <img
-                  alt={`monster ${name}`}
-                  src={`https://robohash.org/${id}?set=set2&size=180x180`} />
-                <h2>{name}</h2>
-                <p>{email}</p>
-              </div>
-              )
-            }
-          )
+              <Card key={monster.id} monster={monster} />
+            )
+          })
         }
       </div>
     );
