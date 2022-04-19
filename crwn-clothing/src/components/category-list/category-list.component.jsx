@@ -1,4 +1,5 @@
 import './category-list.styless.scss';
+
 import CategoryItem from "../category-item/category-item.component";
 
 const CategoryList = () => {
