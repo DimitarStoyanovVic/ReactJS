@@ -29,7 +29,6 @@ const SignInForm = () => {
   }
 
   const handleSubmit = async (event) => {
-    console.log('Hereeeeeeeeeeeeeeee');
     event.preventDefault();
 
     try {
