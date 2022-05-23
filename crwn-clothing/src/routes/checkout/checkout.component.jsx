@@ -5,7 +5,7 @@ import { CartContext } from '../../contexts/cart.context'
 import './checkout.styless.scss';
 
 const CheckOut = () => {
-  const { cartItems, addItemToCart } = useContext(CartContext);
+  const { cartItems, addItemToCart, removeItemFromCart } = useContext(CartContext);
 
   return (
     <div>
@@ -18,7 +18,7 @@ const CheckOut = () => {
               <h2>{name}</h2>
               <span>{quantity}</span>
               <br />
-              <span>decrement</span>
+              <span onClick={() => removeItemFromCart(cartItem)}>decrement</span>
               <br />
               <span onClick={() => addItemToCart(cartItem)}>increment</span>
             </div>
