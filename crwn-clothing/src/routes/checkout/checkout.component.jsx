@@ -6,7 +6,7 @@ import CheckoutItem from "../../components/checkout-item/checkout-item.component
 
 import './checkout.styless.scss';
 
-const CheckOut = () => {
+const Checkout = () => {
   const { cartItems, cartTotal } = useContext(CartContext);
 
   return (
@@ -38,4 +38,4 @@ const CheckOut = () => {
   )
 }
 
-export default CheckOut;
+export default Checkout;
