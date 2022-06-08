@@ -15,8 +15,9 @@ export const BaseButton = styled.button`
   font-weight: bolder;
   border: none;
   cursor: pointer;
-  display: flex;
-  justify-content: center;
+  display: inline;
+  float:left;
+  margin-right: 30px;
 
   &:hover {
     background-color: white;
