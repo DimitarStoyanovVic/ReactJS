@@ -14,6 +14,4 @@ export const ButtonsContainer = styled.div`
   width: 480px;
   display: inline;
   float: left;
-  //display: flex;
-  //justify-content: space-between;
 `;
