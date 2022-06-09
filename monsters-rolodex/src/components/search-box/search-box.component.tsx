@@ -1,4 +1,6 @@
-import './search-box.styles.css'
+import './search-box.styles.css';
+
+const name: string = "1421321";
 
 const SearchBox = ({className, placeholder, onChangeHandler}) => {
   return (
