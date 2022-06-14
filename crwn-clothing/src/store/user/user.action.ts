@@ -3,7 +3,7 @@ import { createAction, withMatcher, Action, ActionWithPayload } from "../../util
 import { UserData, AdditionalInformation } from "../../utils/firebase/firebase.utils";
 import { User } from "firebase/auth";
 
-export type CheckUserSession = Action<USER_ACTION_TYPES.CHECK_USER_SESSION>
+export type CheckUserSession = Action<USER_ACTION_TYPES.CHECK_USER_SESSION>;
 
 export type GoogleSignInStart = Action<USER_ACTION_TYPES.GOOGLE_SIGN_IN_START>;
 
@@ -49,8 +49,8 @@ export const signUpSuccess = withMatcher((user: User, additionalDetails: Additio
 export const signUpFailed = withMatcher((error: Error): SignUpFailed =>
   createAction(USER_ACTION_TYPES.SIGN_UP_FAILED, error));
 
-export const signOutStart = () => withMatcher((): SignOutStart => createAction(USER_ACTION_TYPES.SIGN_OUT_START));
+export const signOutStart = withMatcher((): SignOutStart => createAction(USER_ACTION_TYPES.SIGN_OUT_START));
 
-export const signOutSuccess = () => withMatcher((): SignOutSuccess => createAction(USER_ACTION_TYPES.SIGN_OUT_SUCCESS));
+export const signOutSuccess = withMatcher((): SignOutSuccess => createAction(USER_ACTION_TYPES.SIGN_OUT_SUCCESS));
 
 export const signOutFailed = withMatcher((error: Error): SignOutFailed => createAction(USER_ACTION_TYPES.SIGN_OUT_FAILED, error));
