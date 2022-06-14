@@ -1,6 +1,6 @@
 import { AnyAction } from "redux";
 
-import {signInFailed, signOutFailed, signOutSuccess, signInSuccess, signUpFailed} from "./user.action";
+import { signInFailed, signOutFailed, signOutSuccess, signInSuccess, signUpFailed } from "./user.action";
 
 import { UserData } from "../../utils/firebase/firebase.utils";
 
